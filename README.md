@@ -83,8 +83,6 @@ This project was created to practice:
 * Improved UI design with custom styling.
 * Support for dark mode enhancements.
 
-## Author
 
-Armaan Khan
 
 Built while learning iOS Development with SwiftUI.
