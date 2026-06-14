@@ -1,8 +1,22 @@
-//
-//  PrimeViewsModel.swift
-//  PrimeNum
-//
-//  Created by Armaan Khan  on 12/06/26.
-//
+import SwiftUI
+import Combine
 
-import Foundation
+class PrimeViewsModel: ObservableObject {
+    
+    @Published var resultMessage: String = ""
+    
+    private var primeChecker = PrimeChecker()
+    
+    func checkPrime(number: Int) {
+        let isPrime = primeChecker.isPrime(number: number)
+        resultMessage = message(isprime: isPrime)
+    }
+    
+    func message(isprime: Bool) -> String {
+        if isprime {
+            return "It is  a prime number"
+        } else {
+            return "It is not a prime number"
+        }
+    }
+}
